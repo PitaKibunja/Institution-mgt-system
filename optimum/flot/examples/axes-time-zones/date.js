@@ -7,7 +7,7 @@
 
 /*
  * Copyright 2010 Matthew Eernisse (mde@fleegix.org)
- * and Open Source Applications Foundation
+ * and DapinEdu Applications Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

@@ -59,9 +59,9 @@ Here are some live demos showcasing various features of the library:
 | [Continuous Demo](https://pixlcore.com/demos/webcamjs/demos/continuous.html) | Demonstrates continuously capturing images. |
 | **[Full Combo Demo](https://pixlcore.com/demos/webcamjs/demos/combo.html)** | A full combination demo showcasing all features. |
 
-## Open Source
+## DapinEdu
 
-WebcamJS is open source, MIT licensed, and available on GitHub:
+WebcamJS is DapinEdu, MIT licensed, and available on GitHub:
 
 https://github.com/jhuckaby/webcamjs
 

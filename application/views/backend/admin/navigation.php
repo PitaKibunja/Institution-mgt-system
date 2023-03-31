@@ -52,7 +52,7 @@
      <!---  Permission for Admin Manage Academics starts here ------>
      <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_academics;?>
      <?php if($check_admin_permission == '1'):?>   
-        <li> <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-mortar-board" data-icon="7"></i> <span class="hide-menu"> <?php echo get_phrase('Manage Academics');?> <span class="fa arrow"></span></span></a>
+        <li> <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-mortar-board" data-icon="7"></i> <span class="hide-menu"> <?php echo get_phrase('Academics');?> <span class="fa arrow"></span></span></a>
                         <ul class=" nav nav-second-level<?php
             if (    $page_name == 'enquiry_category'||
                     $page_name == 'list_enquiry'||
@@ -120,7 +120,7 @@
     <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_employee;?>
     <?php if($check_admin_permission == '1'):?> 
 
-        <li class="staff"> <a href="javascript:void(0);" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-angle-double-right p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Manage Employees');?><span class="fa arrow"></span></span></a>
+        <li class="staff"> <a href="javascript:void(0);" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-angle-double-right p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Staff');?><span class="fa arrow"></span></span></a>
         
                         <ul class=" nav nav-second-level<?php if ($page_name == 'teacher')echo 'opened active';?> ">
 
@@ -150,7 +150,7 @@
     <?php $check_admin_permission = $this->db->get_where('admin_role', array('admin_id' => $this->session->userdata('login_user_id')))->row()->manage_student;?>
     <?php if($check_admin_permission == '1'):?>          
                 
-        <li class="student"> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-users p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('manage_students');?><span class="fa arrow"></span></span></a>
+        <li class="student"> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-users p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('Students');?><span class="fa arrow"></span></span></a>
         
                         <ul class=" nav nav-second-level<?php
             if ($page_name == 'new_student' ||
@@ -163,10 +163,10 @@
 
 
                         
-                    <li class="<?php if ($page_name == 'new_student') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>admin/new_student">
+                    <li class="<?php if ($page_name == 'manage_student') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>admin/manage_student">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                              <span class="hide-menu"><?php echo get_phrase('admission_form'); ?></span>
+                              <span class="hide-menu"><?php echo get_phrase('Manage Students'); ?></span>
                         </a>
                     </li>
 
@@ -175,7 +175,7 @@
                      <li class="<?php if ($page_name == 'student_information' || $page_name == 'student_information' || $page_name == 'view_student') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>admin/student_information">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                              <span class="hide-menu"><?php echo get_phrase('list_students'); ?></span>
+                              <span class="hide-menu"><?php echo get_phrase('Student Details'); ?></span>
                         </a>
                     </li>
 
@@ -190,21 +190,32 @@
      <li class="<?php if ($page_name == 'studentHouse') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>studenthouse/studentHouse">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Student House'); ?></span>
+                             <span class="hide-menu"><?php echo get_phrase('Student Day Attendance'); ?></span>
                         </a>
      </li>
-     
+     <li class="<?php if ($page_name == 'studentHouse') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>studenthouse/studentHouse">
+                        <i class="fa fa-angle-double-right p-r-10"></i>
+                             <span class="hide-menu"><?php echo get_phrase('Student Module wise Attendance'); ?></span>
+                        </a>
+     </li>
      <li class="<?php if ($page_name == 'clubActivity') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>activity/clubActivity">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Student Activity'); ?></span>
+                             <span class="hide-menu"><?php echo get_phrase('Student ID Card Generation'); ?></span>
                         </a>
      </li>
      
      <li class="<?php if ($page_name == 'socialCategory') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>socialcategory/socialCategory">
                         <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Social Category'); ?></span>
+                             <span class="hide-menu"><?php echo get_phrase('Student Promotion'); ?></span>
+                        </a>
+     </li>
+     <li class="<?php if ($page_name == 'socialCategory') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>socialcategory/socialCategory">
+                        <i class="fa fa-angle-double-right p-r-10"></i>
+                             <span class="hide-menu"><?php echo get_phrase('Transfer Certificate'); ?></span>
                         </a>
      </li>
         
@@ -315,7 +326,7 @@
             ?>">
 
 
-                        
+            
                          <li class="<?php if ($page_name == 'class') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>admin/classes">
                         <i class="fa fa-angle-double-right p-r-10"></i>

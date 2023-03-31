@@ -532,6 +532,33 @@ class Admin extends CI_Controller {
     }
 
     /***********  The function below add, update and delete student from students' table ***********************/
+    function manage_student ($param1 = null, $param2 = null, $param3 = null){
+
+        if($param1 == 'create'){
+            $this->student_model->createNewStudent();
+            $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'update'){
+            $this->student_model->updateNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'delete'){
+            $this->student_model->deleteNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+
+        }
+
+        $page_data['page_name']     = 'manage_student';
+        $page_data['page_title']    = get_phrase('Manage Student');
+        $this->load->view('backend/index', $page_data);
+
+    }
+    
     function new_student ($param1 = null, $param2 = null, $param3 = null){
 
         if($param1 == 'create'){

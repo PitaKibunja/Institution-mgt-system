@@ -1,3 +1,61 @@
+<style lang="css">
+    /* Add some spacing between elements */
+.row, .form-group {
+  margin-bottom: 20px;
+}
+
+/* Style the panel */
+.panel {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.panel-heading {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px 4px 0 0;
+}
+
+.panel-body {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Style form elements */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+  background-color: #286090;
+}
+
+</style>
 <div class="row">
                     <div class="col-sm-12">
 				  	<div class="panel panel-info">
