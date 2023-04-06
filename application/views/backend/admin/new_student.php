@@ -120,14 +120,14 @@
       </div>
     </div>
     <div class="col-md-4">
-    <div class="form-group">
-          <label for="specialCategory">Special Category</label>
-          <select class="form-control" id="specialCategory" name="specialCategory">
-            <option value="government">Government Sponsored</option>
-            <option value="self">Self Sponsored</option>
-            <option value="scholarship">Scholarship</option>
-          </select>
-        </div>
+      <div class="form-group">
+            <label for="specialCategory">Special Category</label>
+            <select class="form-control" id="specialCategory" name="specialCategory">
+              <option value="government">Government Sponsored</option>
+              <option value="self">Self Sponsored</option>
+              <option value="scholarship">Scholarship</option>
+            </select>
+          </div>
     </div>
     <div class="col-md-4">
     <div class="form-group">
@@ -159,31 +159,49 @@
     <div class="form-group">
       <!-- First column form group here -->
       <label for="fatherName">Father/Guardian Fullname</label>
-  <input type="text" class="form-control" id="fatherName" name="fatherName">
+      <input type="text" class="form-control" id="fatherName" name="fatherName">
     </div>
     <div class="form-group">
       <!-- First column form group here -->
       <label for="motherName">Mother/Guardian Fullname</label>
-  <input type="text" class="form-control" id="motherName" name="motherName">
+      <input type="text" class="form-control" id="motherName" name="motherName">
+    </div>
+
+  </div>
+  <div class="col">
+  <div class="form-group">
+      <!-- Second column form group here -->
+      <label for="fatherPhoneNumber">Father/Guardian Phone Number</label>
+      <input type="tel" class="form-control" id="fatherPhoneNumber" name="fatherPhoneNumber">
+    </div>
+    <div class="form-group">
+      <!-- Second column form group here -->
+      <label for="motherPhoneNumber">Mother/Guardian Phone Number</label>
+      <input type="tel" class="form-control" id="motherPhoneNumber" name="motherPhoneNumber">
     </div>
   </div>
   <div class="col">
     <div class="form-group">
       <!-- Second column form group here -->
-      <label for="parentPhoneNumber">Phone Number</label>
-  <input type="tel" class="form-control" id="parentPhoneNumber" name="parentPhoneNumber">
+      <label for="fatherEmail">Father/Guardian Email Address</label>
+      <input type="email" class="form-control" id="fatherEmail" name="fatherEmail">
     </div>
     <div class="form-group">
       <!-- Second column form group here -->
-      <label for="parentEmail">Email Address</label>
-  <input type="email" class="form-control" id="parentEmail" name="parentEmail">
+      <label for="motherEmail">Mother/Guardian Email Address</label>
+      <input type="email" class="form-control" id="motherEmail" name="motherEmail">
     </div>
   </div>
   <div class="col">
     <div class="form-group">
       <!-- Third column form group here -->
-      <label for="parentProfession">Profession</label>
-  <input type="text" class="form-control" id="parentProfession" name="parentProfession">
+      <label for="fatherProfession">Father/Guardian Profession</label>
+      <input type="text" class="form-control" id="fatherProfession" name="fatherProfession">
+    </div>
+    <div class="form-group">
+      <!-- Third column form group here -->
+      <label for="motherProfession">Mother/Guardian Profession</label>
+      <input type="text" class="form-control" id="motherProfession" name="motherProfession">
     </div>
   </div>
 </div>

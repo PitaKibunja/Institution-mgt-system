@@ -558,7 +558,60 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
 
     }
-    
+    /**************************generate student id*********************************/
+    function id_card_generation ($param1 = null, $param2 = null, $param3 = null){
+
+        if($param1 == 'create'){
+            $this->student_model->createNewStudent();
+            $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'update'){
+            $this->student_model->updateNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'delete'){
+            $this->student_model->deleteNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+
+        }
+
+        $page_data['page_name']     = 'id_card_generation';
+        $page_data['page_title']    = get_phrase('Student ID Card');
+        $this->load->view('backend/index', $page_data);
+
+    }
+    /**Generate the id */
+    function generate_student_id_card ($param1 = null, $param2 = null, $param3 = null){
+
+        if($param1 == 'create'){
+            $this->student_model->createNewStudent();
+            $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'update'){
+            $this->student_model->updateNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'delete'){
+            $this->student_model->deleteNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+            redirect(base_url(). 'admin/generate_student_id_card', 'refresh');
+
+        }
+
+        $page_data['page_name']     = 'generate_student_id_card';
+        $page_data['page_title']    = get_phrase('Create a new Student ID Card');
+        $this->load->view('backend/index', $page_data);
+
+    }
     function new_student ($param1 = null, $param2 = null, $param3 = null){
 
         if($param1 == 'create'){
@@ -585,15 +638,33 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
 
     }
+    function promote_student(){
 
+        $page_data['page_name']     = 'promote_student';
+        $this->session->set_flashdata('flash_message', get_phrase('Promote Students'));
+        $page_data['page_title']    = get_phrase('Student -> Promote Students');
+        $this->load->view('backend/index', $page_data);
+    }
+    function student_transfer(){
 
+        $page_data['page_name']     = 'student_transfer';
+        $this->session->set_flashdata('flash_message', get_phrase('Student Transfer'));
+        $page_data['page_title']    = get_phrase('Student -> Student Transfer');
+        $this->load->view('backend/index', $page_data);
+    }
     function student_information(){
 
         $page_data['page_name']     = 'student_information';
         $page_data['page_title']    = get_phrase('List Student');
         $this->load->view('backend/index', $page_data);
     }
+    function generate_StudentId(){
 
+        $page_data['page_name']     = 'generate_StudentID';
+        $this->session->set_flashdata('flash_message', get_phrase('Generate student ID'));
+        $page_data['page_title']    = get_phrase('Student -> Student ID');
+        $this->load->view('backend/index', $page_data);
+    }
 
     /**************************  search student function with ajax starts here   ***********************************/
     function getStudentClasswise($class_id){

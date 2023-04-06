@@ -199,21 +199,21 @@
                              <span class="hide-menu"><?php echo get_phrase('Student Module wise Attendance'); ?></span>
                         </a>
      </li>
-     <li class="<?php if ($page_name == 'clubActivity') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>activity/clubActivity">
+     <li class="<?php if ($page_name == 'id_card_generation') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>admin/id_card_generation">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                              <span class="hide-menu"><?php echo get_phrase('Student ID Card Generation'); ?></span>
                         </a>
      </li>
      
-     <li class="<?php if ($page_name == 'socialCategory') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>socialcategory/socialCategory">
+     <li class="<?php if ($page_name == 'promote_student') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>admin/promote_student">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                              <span class="hide-menu"><?php echo get_phrase('Student Promotion'); ?></span>
                         </a>
      </li>
-     <li class="<?php if ($page_name == 'socialCategory') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>socialcategory/socialCategory">
+     <li class="<?php if ($page_name == 'student_transfer') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>admin/student_transfer">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                              <span class="hide-menu"><?php echo get_phrase('Transfer Certificate'); ?></span>
                         </a>
