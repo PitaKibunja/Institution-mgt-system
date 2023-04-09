@@ -652,6 +652,32 @@ class Admin extends CI_Controller {
         $page_data['page_title']    = get_phrase('Student -> Student Transfer');
         $this->load->view('backend/index', $page_data);
     }
+    function create_ay(){
+
+        $page_data['page_name']     = 'create_ay';
+        $this->session->set_flashdata('flash_message', get_phrase('Create Academic Year'));
+        $page_data['page_title']    = get_phrase('Academic Year->Create');
+        $this->load->view('backend/index', $page_data);
+    }
+    function create_semester(){
+
+        $page_data['page_name']     = 'create_semester';
+        $this->session->set_flashdata('flash_message', get_phrase('Create New Semester'));
+        $page_data['page_title']    = get_phrase('New Semester');
+        $this->load->view('backend/index', $page_data);
+    }
+    function generate_tc(){
+        $page_data['page_name']     = 'generate_tc';
+        $this->session->set_flashdata('flash_message', get_phrase('Generate Transfer certificate'));
+        $page_data['page_title']    = get_phrase('Student ->Generate TC');
+        $this->load->view('backend/index', $page_data);
+    }
+    function academic_year(){
+        $page_data['page_name']     = 'academic_year';
+        $this->session->set_flashdata('flash_message', get_phrase('Academic Year'));
+        $page_data['page_title']    = get_phrase('Academic Year');
+        $this->load->view('backend/index', $page_data);
+    }
     function student_information(){
 
         $page_data['page_name']     = 'student_information';

@@ -10,7 +10,7 @@
                         </li>
                     </ul>
             <ul class="nav navbar-top-links navbar-right pull-right">
-                <!--<li class="dropdown"> 
+                <li class="dropdown"> 
                     <a class="dropdown-toggle " data-toggle="dropdown" href="#"><i class="icon-envelope"></i>
                         <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
                     </a>
@@ -47,10 +47,10 @@
                             </li>
                         </ul> 
             
-                </li>/.dropdown-messages -->
+                </li>
                     <!-- /.dropdown -->
 
-            <!-- <li class="dropdown"> 
+            <li class="dropdown"> 
                 <a class="dropdown-toggle " data-toggle="dropdown" href="#"><i class="icon-note"></i>
                     <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
                 </a>
@@ -104,7 +104,7 @@
                             </li>
                         </ul>
                         
-                    </li> /.dropdown-tasks -->
+                    </li>
 
 
                     

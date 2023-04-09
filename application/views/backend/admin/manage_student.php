@@ -1,156 +1,161 @@
-<!-- <div class="row">
-<div class="col-sm-12">
 
-
-
-    </div> 
-</div> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-eA6eXj/z0mtggvyD1hEZPW3zjENBMwtwsgB0oTbTUD7hTgDX1pylNWAaO+fz2Vh1c6Hu4gF7sUZnRdZcC7l9JQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-q5dFTXEjHmOT5a5hMUkzXWjKvCUEt7HOhhLScf0DgJl2Z+nH7IbRGn0X9E1kROvGX13oH+Fn0rsK8o7BoPMdYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<div class="container-fluid bg-light">
+<div class="container bg-light">
   <div class="row">
-    <div class="col-12 text-center">
-    <div class="container">
-<div class="container">
+     <div class="col-md-4 col-sm-6">
+     <a href="new_student">
+                        <div class="white-box">
+                            <div class="r-icon-stats">
+                            <i class="fa-light fa-user-plus"></i>
+                                <div class="bodystate">
+                                    <span class="text-muted"><?php echo get_phrase('Add new student');?></span>
+                                </div>
+                            </div>
+                        </div>
+        </a>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+                        <div class="white-box">
+                            <div class="r-icon-stats">
+                                <i class="ti-user bg-megna"></i>
+                                <div class="bodystate">
+                                    <span class="text-muted">Special categories</span>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <a href="">
+                        <div class="white-box">
+                            <div class="r-icon-stats">
+                              
+                              <i class="ti-user bg-megna"></i>
+                                <div class="bodystate">
+                                    <span class="text-muted"> Class/Course basis</span>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <a href="academic_year">
+                        <div class="white-box">
+                            <div class="r-icon-stats">
+                                <div class="bodystate">
+                                    <span class="text-muted">Academic Year/Term</span>
+                                </div>
+                                <i class="ti-calendar bg-megna"></i>
+                            </div>
+                        </div>
+                        </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <a href="">
+                        <div class="white-box">
+                            <div class="r-icon-stats">
+                              
+                              <i class="ti-cog bg-megna"></i>
+                                <div class="bodystate">
+                                    <span class="text-muted">Auto Generation</span>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <a href="">
+                        <div class="white-box">
+                            <div class="r-icon-stats">
+                              
+                              <i class="ti-cog bg-megna"></i>
+                                <div class="bodystate">
+                                    <span class="text-muted">Section/Cohort</span>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        </a>
+        </div>
+</div>
+<div class="row">
+<div class="card mb-4">
+    <div class="card-header">
+                  View and edit Generated TC
+    </div>
   <div class="row">
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="#" class="btn btn-primary btn-lg btn-block">
-        <i class="bi bi-person-plus"></i>
-        Add new student
-      </a>
-    </div>
+  <div class="col-md-12">
 
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="#" class="btn btn-primary btn-lg btn-block">
-        <i class="bi bi-grid-3x3-gap-fill"></i>
-        Special categories
-      </a>
-    </div>
+        <div class="card-body">
+        <div class="h-100  border-primary shadow p-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="class" class="form-label">Academic Year*</label>
+                        <select class="form-control" id="class" required>
+                        <option value="">Choose...</option>
+                        <option value="1">Class 1</option>
+                        <option value="2">Class 2</option>
+                        <option value="3">Class 3</option>
+                        </select>
+                    </div>
+                    <!-- Admission no field, hidden by default -->
+                    <div class="mb-3 d-none" id="admission-no-field">
+                    <label for="admission-no" class="form-label">Admission No*</label>
+                    <input type="text" class="form-control" id="admission-no" required>
+                    </div>
 
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="#" class="btn btn-primary btn-lg btn-block">
-        <i class="bi bi-journal-text"></i>
-        Class/Course basis
-      </a>
-    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Get Details</button>
+                        <button class="btn btn-secondary" type="button">Cancel</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
 
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="#" class="btn btn-primary btn-lg btn-block">
-        <i class="bi bi-grid-3x3-gap-fill"></i>
-        Special categories
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="#" class="btn btn-primary btn-lg btn-block">
-        <i class="bi bi-card-list"></i>
-        Academic Year and Academic Term
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="#" class="btn btn-primary btn-lg btn-block">
-        <i class="bi bi-card-list"></i>
-        Auto Generation
-      </a>
+        </div>
+      
     </div>
   </div>
 </div>
-
 </div>
-    </div>
-  </div>
-  <div class="row">
-  <div class="col-12 text-center">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Search student</h2>
-        <form class="form-inline justify-content-center my-4" method="post" action="search_students.php">
-  <div class="input-group">
-    <input type="text" class="form-control py-3" name="search" placeholder="Search by student ID or name">
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="submit">
-        <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-  </div>
-</form>
-
-        <?php
-          // Get the search query from the form submission
-          $search = $_POST['search'];
-
-          // Connect to the database and retrieve matching student records
-          // ... code to retrieve student details from the database ...
-
-          // Display the search results in a table
-          if ($num_results > 0) {
-            echo "<h3 class='mt-4'>Search results:</h3>";
-            echo "<table class='table'>";
-            echo "<thead><tr><th>Student ID</th><th>Name</th><th>Email</th><th>Phone</th></tr></thead>";
-            echo "<tbody>";
-            while ($row = mysqli_fetch_assoc($result)) {
-              echo "<tr><td>" . $row['id'] . "</td><td>" . $row['name'] . "</td><td>" . $row['email'] . "</td><td>" . $row['phone'] . "</td></tr>";
-            }
-            echo "</tbody></table>";
-          } else if (!empty($search)) {
-            echo "<p class='mt-4'>No results found for '$search'</p>";
-          }
-        ?>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <div class="row">
-    <div class="col-12 text-center">
-    <div class="card">
-  <div class="card-body">
-    <form class="form-inline justify-content-end my-3">
-      <div class="form-group">
-        <label for="rowsPerPage" class="mr-2">Rows per page:</label>
-        <select class="form-control" id="rowsPerPage">
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="20">20</option>
-        </select>
-      </div>
-      <div class="form-group mx-3">
-        <input type="text" class="form-control" id="search" placeholder="Search by name or ID">
-      </div>
-      <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-    <div class="table-responsive">
-      <table class="table table-bordered">
+<div class="container card">
+<div class="row">
+  <div class="table-responsive mt-4 mb-4">
+    <table class="table table-hover mt-8" id="promotion">
         <thead>
-          <tr>
-            <th>Admission No</th>
-            <th>Access No (Bio-Metric)</th>
+        <tr>
+            <th>TC NO</th>
             <th>Student Name</th>
-            <th>Class/Semester/Section</th>
-            <th>Student Contact Tel</th>
-            <th>Parent Contact Tel</th>
+            <th>Admission No</th>
+            <th>Generated Academic Year</th>
+            <th>Generated Date</th>
             <th>Action</th>
-          </tr>
+        </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1001</td>
-            <td>123456</td>
+        <tr>
+            <td>101</td>
             <td>John Doe</td>
-            <td>11th Grade - Section A</td>
-            <td>555-1234</td>
-            <td>555-5678</td>
-            <td><button class="btn btn-primary">View Details</button></td>
-          </tr>
-          <!-- more rows here -->
+            <td>P/12/2023</td>
+            <td>2023</td>
+            <td>01-March</td>
+            <td>action</td>
+        </tr>
         </tbody>
-      </table>
+    </table>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-    </div>
-  </div>
+
 </div>
+<script>
+  $(document).ready(function() {
+    $('#promotion').DataTable({
+        "paging": true,
+        "searching": true
+    });
+});
+</script>
