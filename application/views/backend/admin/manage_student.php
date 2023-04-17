@@ -1,9 +1,9 @@
 
 <div class="container bg-light">
-  <div class="row">
-     <div class="col-md-4 col-sm-6">
+  <div class="row h-100  border-primary shadow p-3">
+     <div class=" col-md-4 col-sm-6 ">
      <a href="new_student">
-                        <div class="white-box">
+                        <div class="white-box card">
                             <div class="r-icon-stats">
                             <i class="fa-light fa-user-plus"></i>
                                 <div class="bodystate">
@@ -15,7 +15,8 @@
         </div>
 
         <div class="col-md-4 col-sm-6">
-                        <div class="white-box">
+        <a href="special_categories">
+                        <div class="white-box card">
                             <div class="r-icon-stats">
                                 <i class="ti-user bg-megna"></i>
                                 <div class="bodystate">
@@ -23,10 +24,11 @@
                                 </div>
                             </div>
                         </div>
+        </a>
         </div>
         <div class="col-md-4 col-sm-6">
-        <a href="">
-                        <div class="white-box">
+        <a href="courses_page">
+                        <div class="white-box card">
                             <div class="r-icon-stats">
                               
                               <i class="ti-user bg-megna"></i>
@@ -40,7 +42,7 @@
         </div>
         <div class="col-md-4 col-sm-6">
         <a href="academic_year">
-                        <div class="white-box">
+                        <div class="white-box card">
                             <div class="r-icon-stats">
                                 <div class="bodystate">
                                     <span class="text-muted">Academic Year/Term</span>
@@ -51,13 +53,13 @@
                         </a>
         </div>
         <div class="col-md-4 col-sm-6">
-        <a href="">
-                        <div class="white-box">
+        <a href="auto_generate_id">
+                        <div class="white-box card">
                             <div class="r-icon-stats">
                               
                               <i class="ti-cog bg-megna"></i>
                                 <div class="bodystate">
-                                    <span class="text-muted">Auto Generation</span>
+                                <span class="text-muted text-danger">Auto Generation</span>
                                 </div>
                             
                             </div>
@@ -66,12 +68,12 @@
         </div>
         <div class="col-md-4 col-sm-6">
         <a href="">
-                        <div class="white-box">
+                        <div class="white-box card">
                             <div class="r-icon-stats">
                               
                               <i class="ti-cog bg-megna"></i>
                                 <div class="bodystate">
-                                    <span class="text-muted">Section/Cohort</span>
+                                    <span class="text-muted bold">Section/Cohort</span>
                                 </div>
                             
                             </div>

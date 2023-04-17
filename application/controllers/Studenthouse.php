@@ -41,7 +41,13 @@ class Studenthouse extends CI_Controller {
         $this->load->view('backend/index', $page_data);
 
     }
+    function moduleAttendance(){
 
+        $page_data['page_name']     = 'moduleAttendance';
+        $this->session->set_flashdata('flash_message', get_phrase('Module BasedAttendance'));
+        $page_data['page_title']    = get_phrase('Academic Year->Create');
+        $this->load->view('backend/index', $page_data);
+    }
 
 
 

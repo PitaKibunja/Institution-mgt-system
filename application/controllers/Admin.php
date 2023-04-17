@@ -659,6 +659,27 @@ class Admin extends CI_Controller {
         $page_data['page_title']    = get_phrase('Academic Year->Create');
         $this->load->view('backend/index', $page_data);
     }
+    function courses_page(){
+
+        $page_data['page_name']     = 'courses_page';
+        $this->session->set_flashdata('flash_message', get_phrase('Add Courses'));
+        $page_data['page_title']    = get_phrase('Student -> Courses');
+        $this->load->view('backend/index', $page_data);
+    }
+    function auto_generate_id(){
+
+        $page_data['page_name']     = 'auto_generate_id';
+        $this->session->set_flashdata('flash_message', get_phrase('Auto Generate ID'));
+        $page_data['page_title']    = get_phrase('Auto Generate Department ID');
+        $this->load->view('backend/index', $page_data);
+    }
+
+    function special_categories(){
+        $page_data['page_name']     = 'special_categories';
+        $this->session->set_flashdata('flash_message', get_phrase('Special Categories'));
+        $page_data['page_title']    = get_phrase('Special Categories');
+        $this->load->view('backend/index', $page_data);
+    }
     function create_semester(){
 
         $page_data['page_name']     = 'create_semester';

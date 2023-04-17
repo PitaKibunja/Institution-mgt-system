@@ -180,12 +180,7 @@
                     </li>
 
 
-    <li class="<?php if ($page_name == 'studentCategory') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>studentcategory/studentCategory">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Student Categories'); ?></span>
-                        </a>
-     </li>
+
      
      <li class="<?php if ($page_name == 'studentHouse') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>studenthouse/studentHouse">
@@ -193,8 +188,8 @@
                              <span class="hide-menu"><?php echo get_phrase('Student Day Attendance'); ?></span>
                         </a>
      </li>
-     <li class="<?php if ($page_name == 'studentHouse') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>studenthouse/studentHouse">
+     <li class="<?php if ($page_name == 'Module Based Attendance') echo 'active'; ?> ">
+                        <a href="<?php echo base_url(); ?>studenthouse/moduleAttendance">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                              <span class="hide-menu"><?php echo get_phrase('Student Module wise Attendance'); ?></span>
                         </a>
