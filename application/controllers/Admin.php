@@ -673,7 +673,12 @@ class Admin extends CI_Controller {
         $page_data['page_title']    = get_phrase('Auto Generate Department ID');
         $this->load->view('backend/index', $page_data);
     }
-
+    function cohort(){
+        $page_data['page_name']     = 'cohort';
+        $this->session->set_flashdata('flash_message', get_phrase('cohort/section'));
+        $page_data['page_title']    = get_phrase('Cohort/Section');
+        $this->load->view('backend/index', $page_data);
+    }
     function special_categories(){
         $page_data['page_name']     = 'special_categories';
         $this->session->set_flashdata('flash_message', get_phrase('Special Categories'));

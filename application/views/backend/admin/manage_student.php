@@ -1,5 +1,6 @@
-
 <div class="container bg-light">
+<h4>PREREQUISITES</h4>
+<hr class="mt-0">
   <div class="row h-100  border-primary shadow p-3">
      <div class=" col-md-4 col-sm-6 ">
      <a href="new_student">
@@ -67,7 +68,7 @@
                         </a>
         </div>
         <div class="col-md-4 col-sm-6">
-        <a href="">
+        <a href="cohort">
                         <div class="white-box card">
                             <div class="r-icon-stats">
                               
@@ -84,7 +85,7 @@
 <div class="row">
 <div class="card mb-4">
     <div class="card-header">
-                  View and edit Generated TC
+                  
     </div>
   <div class="row">
   <div class="col-md-12">

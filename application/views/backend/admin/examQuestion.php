@@ -1,11 +1,8 @@
 <div class="row">
                     <div class="col-sm-12">
                         <div class="panel panel-info">
-                            <div class="panel-heading">
-							
-							EXAM QUESTION PAPER
-						   
-						   
+                            <div class="panel-heading">	
+							EXAM QUESTION PAPER 
                             <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD NEW QUESTION PAPER<i class="btn btn-info btn-xs"></i></a> <a href="#" data-perform="panel-dismiss"></a> </div>
                             </div>
                             <div class="panel-wrapper collapse out" aria-expanded="true">
