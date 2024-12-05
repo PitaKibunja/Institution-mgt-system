@@ -1,4 +1,4 @@
-Thanks for having interest in our open source software
+Thanks for having interest in our DapinEdu software
 Follow the steps below for the installation:
 
 STEPS 1: LOCAL SERVER INSTALLATION

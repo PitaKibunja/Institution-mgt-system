@@ -532,6 +532,86 @@ class Admin extends CI_Controller {
     }
 
     /***********  The function below add, update and delete student from students' table ***********************/
+    function manage_student ($param1 = null, $param2 = null, $param3 = null){
+
+        if($param1 == 'create'){
+            $this->student_model->createNewStudent();
+            $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'update'){
+            $this->student_model->updateNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'delete'){
+            $this->student_model->deleteNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+
+        }
+
+        $page_data['page_name']     = 'manage_student';
+        $page_data['page_title']    = get_phrase('Manage Student');
+        $this->load->view('backend/index', $page_data);
+
+    }
+    /**************************generate student id*********************************/
+    function id_card_generation ($param1 = null, $param2 = null, $param3 = null){
+
+        if($param1 == 'create'){
+            $this->student_model->createNewStudent();
+            $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'update'){
+            $this->student_model->updateNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'delete'){
+            $this->student_model->deleteNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+
+        }
+
+        $page_data['page_name']     = 'id_card_generation';
+        $page_data['page_title']    = get_phrase('Student ID Card');
+        $this->load->view('backend/index', $page_data);
+
+    }
+    /**Generate the id */
+    function generate_student_id_card ($param1 = null, $param2 = null, $param3 = null){
+
+        if($param1 == 'create'){
+            $this->student_model->createNewStudent();
+            $this->session->set_flashdata('flash_message', get_phrase('Data saved successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'update'){
+            $this->student_model->updateNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data updated successfully'));
+            redirect(base_url(). 'admin/student_information', 'refresh');
+        }
+
+        if($param1 == 'delete'){
+            $this->student_model->deleteNewStudent($param2);
+            $this->session->set_flashdata('flash_message', get_phrase('Data deleted successfully'));
+            redirect(base_url(). 'admin/generate_student_id_card', 'refresh');
+
+        }
+
+        $page_data['page_name']     = 'generate_student_id_card';
+        $page_data['page_title']    = get_phrase('Create a new Student ID Card');
+        $this->load->view('backend/index', $page_data);
+
+    }
     function new_student ($param1 = null, $param2 = null, $param3 = null){
 
         if($param1 == 'create'){
@@ -558,15 +638,85 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
 
     }
+    function promote_student(){
 
+        $page_data['page_name']     = 'promote_student';
+        $this->session->set_flashdata('flash_message', get_phrase('Promote Students'));
+        $page_data['page_title']    = get_phrase('Student -> Promote Students');
+        $this->load->view('backend/index', $page_data);
+    }
+    function student_transfer(){
 
+        $page_data['page_name']     = 'student_transfer';
+        $this->session->set_flashdata('flash_message', get_phrase('Student Transfer'));
+        $page_data['page_title']    = get_phrase('Student -> Student Transfer');
+        $this->load->view('backend/index', $page_data);
+    }
+    function create_ay(){
+
+        $page_data['page_name']     = 'create_ay';
+        $this->session->set_flashdata('flash_message', get_phrase('Create Academic Year'));
+        $page_data['page_title']    = get_phrase('Academic Year->Create');
+        $this->load->view('backend/index', $page_data);
+    }
+    function courses_page(){
+
+        $page_data['page_name']     = 'courses_page';
+        $this->session->set_flashdata('flash_message', get_phrase('Add Courses'));
+        $page_data['page_title']    = get_phrase('Student -> Courses');
+        $this->load->view('backend/index', $page_data);
+    }
+    function auto_generate_id(){
+
+        $page_data['page_name']     = 'auto_generate_id';
+        $this->session->set_flashdata('flash_message', get_phrase('Auto Generate ID'));
+        $page_data['page_title']    = get_phrase('Auto Generate Department ID');
+        $this->load->view('backend/index', $page_data);
+    }
+    function cohort(){
+        $page_data['page_name']     = 'cohort';
+        $this->session->set_flashdata('flash_message', get_phrase('cohort/section'));
+        $page_data['page_title']    = get_phrase('Cohort/Section');
+        $this->load->view('backend/index', $page_data);
+    }
+    function special_categories(){
+        $page_data['page_name']     = 'special_categories';
+        $this->session->set_flashdata('flash_message', get_phrase('Special Categories'));
+        $page_data['page_title']    = get_phrase('Special Categories');
+        $this->load->view('backend/index', $page_data);
+    }
+    function create_semester(){
+
+        $page_data['page_name']     = 'create_semester';
+        $this->session->set_flashdata('flash_message', get_phrase('Create New Semester'));
+        $page_data['page_title']    = get_phrase('New Semester');
+        $this->load->view('backend/index', $page_data);
+    }
+    function generate_tc(){
+        $page_data['page_name']     = 'generate_tc';
+        $this->session->set_flashdata('flash_message', get_phrase('Generate Transfer certificate'));
+        $page_data['page_title']    = get_phrase('Student ->Generate TC');
+        $this->load->view('backend/index', $page_data);
+    }
+    function academic_year(){
+        $page_data['page_name']     = 'academic_year';
+        $this->session->set_flashdata('flash_message', get_phrase('Academic Year'));
+        $page_data['page_title']    = get_phrase('Academic Year');
+        $this->load->view('backend/index', $page_data);
+    }
     function student_information(){
 
         $page_data['page_name']     = 'student_information';
         $page_data['page_title']    = get_phrase('List Student');
         $this->load->view('backend/index', $page_data);
     }
+    function generate_StudentId(){
 
+        $page_data['page_name']     = 'generate_StudentID';
+        $this->session->set_flashdata('flash_message', get_phrase('Generate student ID'));
+        $page_data['page_title']    = get_phrase('Student -> Student ID');
+        $this->load->view('backend/index', $page_data);
+    }
 
     /**************************  search student function with ajax starts here   ***********************************/
     function getStudentClasswise($class_id){

@@ -2,7 +2,7 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An DapinEdu application development framework for PHP 5.1.6 or newer
  *
  * @package		CodeIgniter
  * @author		ExpressionEngine Dev Team
